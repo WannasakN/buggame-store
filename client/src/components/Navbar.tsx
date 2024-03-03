@@ -19,10 +19,16 @@ const Navbar: React.FC = () => {
     navigate("/home");
   };
 
+  const handleLogoClick = () => {
+    navigate('/home');
+  };
+
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">Navbar</a>
+        <a className="navbar-brand" href="/home" onClick={handleLogoClick}>
+          <img src={require("../Images/Logo_BugStore.png")} alt="Logo" />
+        </a>
         <button className="navbar-toggler" type="button" onClick={toggleNavbar}>
           <span className="navbar-toggler-icon"></span>
         </button>
@@ -35,7 +41,7 @@ const Navbar: React.FC = () => {
               <a className="nav-link" href="/history">ประวัติการสั่งซื้อ</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">เติมพอยท์</a>
+              <a className="nav-link" href="/point">เติมพอยท์</a>
             </li>
           </ul>
           <ul className="navbar-nav">
